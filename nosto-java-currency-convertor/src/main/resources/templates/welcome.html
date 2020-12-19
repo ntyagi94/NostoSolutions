@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Nosto - Currency Converter</title>
+    
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+	<button onclick="i18next.changeLanguage('en')">
+	  English
+	</button>
+	<button onclick="i18next.changeLanguage('fi')">
+	  Hindi
+	</button>
+
+	<div class="box">
+		<form id="frm-input-data">
+			<div id="errorlist" style="color:red;"></div>
+		  <div class="form-group">
+		    <label id="sourceLbl" for="source">Source Currency: </label>
+		    <select id="source" name="source" class="form-control">
+		    	<option value="">--- SELECT SOURCE CURRENCY ---</option>
+			    <option value="USD">USD</option>
+				<option value="GBP">GBP</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+				<option value="BGN">BGN</option>
+				<option value="CZK">CZK</option>
+				<option value="DKK">DKK</option>
+				<option value="HUF">HUF</option>
+				<option value="PLN">PLN</option>
+				<option value="RON">RON</option>
+				<option value="SEK">SEK</option>
+				<option value="CHF">CHF</option>
+				<option value="ISK">ISK</option>
+				<option value="NOK">NOK</option>
+				<option value="HRK">HRK</option>
+				<option value="RUB">RUB</option>
+				<option value="TRY">TRY</option>
+				<option value="AUD">AUD</option>
+				<option value="BRL">BRL</option>
+				<option value="CAD">CAD</option>
+				<option value="CNY">CNY</option>
+				<option value="HKD">HKD</option>
+				<option value="IDR">IDR</option>
+				<option value="ILS">ILS</option>
+				<option value="INR">INR</option>
+				<option value="KRW">KRW</option>
+				<option value="MXN">MXN</option>
+				<option value="NZD">NZD</option>
+				<option value="BHP">BHP</option>
+				<option value="SGD">SGD</option>
+				<option value="THB">THB</option>
+				<option value="ZAR">ZAR</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		  <label id="targetLbl" for="target">Target Currency Value: </label>
+		  <select id="target" name="target" class="form-control">
+		  		<option value="">--- SELECT TARGET CURRENCY ---</option>	
+			    <option value="USD">USD</option>
+				<option value="GBP">GBP</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+				<option value="BGN">BGN</option>
+				<option value="CZK">CZK</option>
+				<option value="DKK">DKK</option>
+				<option value="HUF">HUF</option>
+				<option value="PLN">PLN</option>
+				<option value="RON">RON</option>
+				<option value="SEK">SEK</option>
+				<option value="CHF">CHF</option>
+				<option value="ISK">ISK</option>
+				<option value="NOK">NOK</option>
+				<option value="HRK">HRK</option>
+				<option value="RUB">RUB</option>
+				<option value="TRY">TRY</option>
+				<option value="AUD">AUD</option>
+				<option value="BRL">BRL</option>
+				<option value="CAD">CAD</option>
+				<option value="CNY">CNY</option>
+				<option value="HKD">HKD</option>
+				<option value="IDR">IDR</option>
+				<option value="ILS">ILS</option>
+				<option value="INR">INR</option>
+				<option value="KRW">KRW</option>
+				<option value="MXN">MXN</option>
+				<option value="NZD">NZD</option>
+				<option value="BHP">BHP</option>
+				<option value="SGD">SGD</option>
+				<option value="THB">THB</option>
+				<option value="ZAR">ZAR</option>
+		    </select>
+		  </div> 
+		  <div class="form-group">
+		  <label id="amountTxt" for="amount">Amount: </label>
+		    <input type="text" class="form-control" id="amount" placeholder="0.0">
+		  </div>
+		  <p id="resultContainer">
+		  	<span id="resultTitle">Result: </span>
+		  	<span id="resultConvertion"></span>
+		  <p>
+		  <button class="btn btn-primary btn-convert">Submit<i class="fa fa-exchange"></i></button>
+		</form>
+	</div>
+	
+	<!-- scripts -->
+	<script type="text/javascript" src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+	<script type="text/javascript" th:src="@{js/main.js}"></script>
+	<!-- end scripts -->
+</body>
+</html>

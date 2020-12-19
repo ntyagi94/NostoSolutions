@@ -1,0 +1,22 @@
+html,
+body {
+	height: 100%;
+	background: rgb(2,0,36);
+	background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(43,43,152,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.box {
+	position: absolute;
+	left: 30%;
+	top: 25%;
+	width: 40%;
+	height: 550px;
+	background: #FFFFFF;
+	border-radius:5%;
+	padding: 4%;
+}
+
+.btn-convert {
+	width: 100%;
+	text-align: center;
+}
