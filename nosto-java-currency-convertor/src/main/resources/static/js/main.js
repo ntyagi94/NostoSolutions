@@ -28,7 +28,7 @@ i18next.init({
 function updateContent() {
   $("#sourceLbl").text(i18next.t('source-text'));
   $("#targetLbl").text(i18next.t('target-text'));
-  $("#amountTxt").text(i18next.t('target-text'));
+  $("#amountTxt").text(i18next.t('Monetary Value'));
   $("#resultTitle").text(i18next.t('result-text'));
   $(".btn-primary").text(i18next.t('submit-text'));
 }
